@@ -49,14 +49,14 @@ else if (empty($_SESSION['user_id']) && array_key_exists($page, $guest)) {
     exit;
 }
 
-include "view/header.php";
+include "header.php";
 
-if (file_exists("view/$page.php")) {
-    include "view/$page.php";
+if (file_exists("$page.php")) {
+    include "$page.php";
 } else {
-    include "view/404.php";
+    include "404.php";
 }
-include "view/footer.php";
+include "footer.php";
 
 ?>
 
